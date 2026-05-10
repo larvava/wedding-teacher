@@ -1,0 +1,533 @@
+{
+  "metadata": {
+    "unit": "만원",
+    "vat_included": true,
+    "season": "성수기",
+    "report_date": "2025-10-10",
+    "source": "결혼준비대행 업체 가격정보 (5개사 비교)",
+    "studio_baseline": "앨범 20p, 액자 20R 기준",
+    "common_dress_notes": [
+      "드레스 1회 피팅비 5.5만원",
+      "드레스 헬퍼 1회당 25만원 (대부분 업체)"
+    ],
+    "common_makeup_notes": [
+      "실장급/부원장급/원장급 등급별 가격",
+      "5시 이전 얼리 스타트 시 22만원 추가 (대부분 업체)",
+      "패키지(스드메 동시 계약시) 추가 할인 가능"
+    ]
+  },
+  "agencies": [
+    {
+      "name": "제이웨딩",
+      "studio": [
+        { "vendor": "ST쩡우", "price": "117" },
+        { "vendor": "그레이스케일", "price": "10시 150 / 12시 172 / 15시 161" },
+        { "vendor": "글렌하우스", "price": "오전 194 / 오후 216" },
+        { "vendor": "드플레", "price": "154" },
+        { "vendor": "디하우스", "price": "3-10월(10시 161/13시 172/16시 183), 11-2월(11시 161/14시 30분 161)" },
+        { "vendor": "라망드비", "price": "139", "note": "20p 촬영" },
+        { "vendor": "라크마(구.위야)", "price": "183" },
+        { "vendor": "랑게(구.르노브)", "price": "150" },
+        { "vendor": "루미에르스튜디오", "price": "161" },
+        { "vendor": "루미에스튜디오", "price": "139" },
+        { "vendor": "르안스튜디오", "price": "139" },
+        { "vendor": "메종드힐", "price": "오전 161 / 오후 172" },
+        { "vendor": "모스트", "price": "토탈 세미 106.5 / 토탈 세미+ 128 / 토탈 원데이 161" },
+        { "vendor": "페레", "price": "134" },
+        { "vendor": "플로우", "price": "150" },
+        { "vendor": "해밀", "price": "139" }
+      ],
+      "dress_helper_per_session": 25,
+      "dress_fitting_fee": 5.5,
+      "dress": [
+        { "vendor": "누벨드블랑", "main": 139, "shoot": 139, "main_plus_shoot": 161 },
+        { "vendor": "니콜스포사", "main": 128, "shoot": 128, "main_plus_shoot": 139 },
+        { "vendor": "더에이미", "main": 161, "shoot": 161, "main_plus_shoot": 183 },
+        { "vendor": "더케네스블랑", "main": 110, "shoot": 110, "main_plus_shoot": 128 },
+        { "vendor": "도화브라이드", "main": 161, "shoot": 161, "main_plus_shoot": 172 },
+        { "vendor": "디아일", "main": 117, "shoot": 117, "main_plus_shoot": 139 },
+        { "vendor": "디유드라포엠", "main": 150, "shoot": 150, "main_plus_shoot": 172 },
+        { "vendor": "라포레", "main": 216, "shoot": 216, "main_plus_shoot": 250 },
+        { "vendor": "레이나모라", "main": 130, "shoot": 130, "main_plus_shoot": 150 },
+        { "vendor": "로아나블랑", "main": 117, "shoot": 117, "main_plus_shoot": 128 },
+        { "vendor": "브라이드케이", "main": 95, "shoot": 95, "main_plus_shoot": 106 },
+        { "vendor": "비비드블랑", "main": 139, "shoot": 139, "main_plus_shoot": 161 },
+        { "vendor": "세인트", "main": 139, "shoot": 139, "main_plus_shoot": 150 },
+        { "vendor": "스틸레디어", "main": 106, "shoot": 106, "main_plus_shoot": 128 },
+        { "vendor": "시그니쳐B", "main": 95, "shoot": 95, "main_plus_shoot": 117 },
+        { "vendor": "아비가일", "main": 95, "shoot": 95, "main_plus_shoot": 117 },
+        { "vendor": "아이테오", "main": 194, "shoot": 194, "main_plus_shoot": 216 },
+        { "vendor": "알렉산드라", "main": 128, "shoot": 128, "main_plus_shoot": 139 },
+        { "vendor": "에스메랄다", "main": 195, "shoot": 195, "main_plus_shoot": 225 },
+        { "vendor": "이브스더데이", "main": 105, "shoot": 105, "main_plus_shoot": 115 },
+        { "vendor": "이슬진웨딩", "main": 172, "shoot": 172, "main_plus_shoot": 205 },
+        { "vendor": "장다인웨딩", "main": 78.5, "shoot": 78.5, "main_plus_shoot": 89.5 },
+        { "vendor": "제시카로렌", "main": 150, "shoot": 150, "main_plus_shoot": 183 },
+        { "vendor": "제이스포사", "main": 117, "shoot": 117, "main_plus_shoot": 139 },
+        { "vendor": "조슈아벨", "main": 117, "shoot": 117, "main_plus_shoot": 128 },
+        { "vendor": "줄리엣발코니", "main": 75, "shoot": 75, "main_plus_shoot": 85 },
+        { "vendor": "크리드제이", "main": 130, "shoot": 130, "main_plus_shoot": 140 },
+        { "vendor": "클라리웨딩", "main": 172, "shoot": 139, "main_plus_shoot": 205 }
+      ],
+      "makeup": [
+        { "vendor": "김할란유제네프", "tiers": { "부원장급": 84, "원장급": 89.5 } },
+        { "vendor": "꾸띠웜", "tiers": { "실장급": 58, "부원장급": 67.5, "원장급": 73 } },
+        { "vendor": "라매종", "tiers": { "실장급": 76, "부원장급": 82, "원장급": 93 } },
+        { "vendor": "로나", "tiers": { "실장급": 67.5, "부원장급": 78.5, "원장급": 88.4 } },
+        { "vendor": "로쉬", "tiers": { "실장급": 67.5, "부원장급": 73, "원장급": 84 } },
+        { "vendor": "밈mimm", "tiers": { "실장급": 78.5, "부원장급": 84, "원장급": 95 } },
+        { "vendor": "뷰티잔통희and그랜드룸", "tiers": { "팀장급": 72.5, "실장급": 78.5, "부원장급": 84, "원장급": 95 } },
+        { "vendor": "비올", "tiers": { "실장급": 65.5, "부원장급": 70.5, "원장급": 73.5 } },
+        { "vendor": "설영", "tiers": { "실장급": 78.5, "부원장급": 89.5 } },
+        { "vendor": "순수청담", "tiers": { "실장급": 78, "부원장급": 89, "원장급": 103 } }
+      ]
+    },
+    {
+      "name": "하우투웨딩",
+      "studio": [
+        { "vendor": "S스튜디오", "price": "144" },
+        { "vendor": "구호", "price": "133" },
+        { "vendor": "그날의기억", "price": "132" },
+        { "vendor": "글렌하우스", "price": "177" },
+        { "vendor": "노우드", "price": "264 / 세미 174" },
+        { "vendor": "더용마", "price": "144" },
+        { "vendor": "더청담", "price": "144" },
+        { "vendor": "데이튼", "price": "오전 199 / 오후 229" },
+        { "vendor": "듀안", "price": "177" },
+        { "vendor": "디하우스", "price": "오전 166 / 오후 177" },
+        { "vendor": "라망(드비)", "price": "144" },
+        { "vendor": "랑게", "price": "166" }
+      ],
+      "dress_helper_per_session": 25,
+      "dress_fitting_fee": 5.5,
+      "dress": [
+        { "vendor": "메라키", "main": 143, "shoot": 143, "main_plus_shoot_total": 154 },
+        { "vendor": "메이제인", "main": 143, "shoot": 143, "main_plus_shoot_total": 165 },
+        { "vendor": "모네뜨아르", "main": 105, "shoot": 105, "main_plus_shoot_total": 121 },
+        { "vendor": "모니카블랑쉬", "main": 198, "shoot": 198, "main_plus_shoot_total": 209 },
+        { "vendor": "모리엠포티", "main": 143, "shoot": 143, "main_plus_shoot_total": 165 },
+        { "vendor": "보네르", "main": 176, "shoot": 176, "main_plus_shoot_total": 198 },
+        { "vendor": "보니타베일리", "main": 154, "shoot": 154, "main_plus_shoot_total": 176 },
+        { "vendor": "브라이드벨라", "main": 83, "shoot": 83, "main_plus_shoot_total": 100 },
+        { "vendor": "브라이드케이", "main": 110, "shoot": 110, "main_plus_shoot_total": 121 },
+        { "vendor": "세인트", "main": 143, "shoot": 143, "main_plus_shoot_total": 154 },
+        { "vendor": "시즌알렉스", "main": 209, "shoot": 209, "main_plus_shoot_total": 242 },
+        { "vendor": "아르비체", "main": 110, "shoot": 110, "main_plus_shoot_total": 121 },
+        { "vendor": "아비가일", "main": 110, "shoot": 110, "main_plus_shoot_total": 132 }
+      ],
+      "makeup": [
+        { "vendor": "꾸띠원", "tiers": { "실장급": 53, "부원장급": 63, "원장급": 68 }, "package_total": { "실장급": 70, "부원장급": 79, "원장급": 90 } },
+        { "vendor": "끌로에", "tiers": { "실장급": 63, "부원장급": 68, "원장급": 74 }, "package_total": { "실장급": 79, "부원장급": 90, "원장급": 101 } },
+        { "vendor": "멜시", "tiers": { "실장급": 74, "부원장급": 79, "원장급": 107 }, "package_total": { "실장급": 101, "부원장급": 112, "원장급": 156 } },
+        { "vendor": "설영", "tiers": { "실장급": 74, "부원장급": 85, "원장급": 90 }, "package_total": { "실장급": 90, "부원장급": 101, "원장급": 112 } },
+        { "vendor": "쓰리스토리", "tiers": { "부원장급": 60, "원장급": 70 }, "package_total": { "부원장급": 85, "원장급": 95 } }
+      ]
+    },
+    {
+      "name": "케이앤엠코퍼레이션(신부야)",
+      "studio": [
+        { "vendor": "ST쩡우(에스티쩡우)", "price": "102-118" },
+        { "vendor": "s스튜디오", "price": "124" },
+        { "vendor": "구호스튜디오", "price": "102-129" },
+        { "vendor": "그가사랑하는순간", "price": "165-180" },
+        { "vendor": "그레이스케일 스튜디오", "price": "101.5-157" },
+        { "vendor": "글렌하우스 스튜디오", "price": "179-201" },
+        { "vendor": "노아고즈", "price": "180-370" },
+        { "vendor": "노을 스튜디오", "price": "124-157" },
+        { "vendor": "노우드하우스(구.누야)", "price": "49-220" },
+        { "vendor": "느와르블랑하우스", "price": "220" },
+        { "vendor": "더청담스튜디오", "price": "124-140" },
+        { "vendor": "라엔디스스튜디오", "price": "190" },
+        { "vendor": "라흐 스튜디오", "price": "181" },
+        { "vendor": "랑게(구.르노브)", "price": "146" },
+        { "vendor": "로그에이(LOG_A)", "price": "130-440" },
+        { "vendor": "로라(구.블랑드원느)", "price": "135-162" },
+        { "vendor": "로렌하우스(구.오후햇살)", "price": "113-118" },
+        { "vendor": "로맨틱에비뉴", "price": "118" },
+        { "vendor": "리애스튜디오", "price": "180-210" },
+        { "vendor": "메이튼스튜디오", "price": "135" },
+        { "vendor": "모스트스튜디오", "price": "97.5-151" },
+        { "vendor": "미루스튜디오(구.플리트비체)", "price": "157" },
+        { "vendor": "미모아스튜디오", "price": "157" },
+        { "vendor": "미세인트(구.리유) 스튜디오", "price": "165-220" },
+        { "vendor": "바로오늘이그날(청담)", "price": "165" },
+        { "vendor": "바이메이튼", "price": "124" },
+        { "vendor": "버드투블룸", "price": "146" },
+        { "vendor": "보어하우스", "price": "124-168" },
+        { "vendor": "볼라르스튜디오(구.바오그남산)", "price": "160-380" },
+        { "vendor": "봉스튜디오", "price": "135-140" },
+        { "vendor": "부겐빌리아 스튜디오", "price": "157" },
+        { "vendor": "비마이 스튜디오", "price": "157" },
+        { "vendor": "비비엔다 스튜디오", "price": "180-370" },
+        { "vendor": "비슈어 스튜디오", "price": "201" },
+        { "vendor": "섬 스튜디오", "price": "124-151" },
+        { "vendor": "세미앙스튜디오(구.달빛스쿠터)", "price": "168" },
+        { "vendor": "셀럽비비 라비앙", "price": "124-140" },
+        { "vendor": "스튜디오 원규", "price": "135-162" },
+        { "vendor": "식스플로어", "price": "102-113" },
+        { "vendor": "실버문 스튜디오", "price": "124-140" },
+        { "vendor": "아뜰리에포유(1호-포유점)", "price": "120-187" },
+        { "vendor": "아르센 스튜디오", "price": "91-146" },
+        { "vendor": "아우드 스튜디오(구.고오)", "price": "230-500" },
+        { "vendor": "아우라스튜디오", "price": "113" },
+        { "vendor": "아우어스튜디오", "price": "96-135" },
+        { "vendor": "아키스튜디오", "price": "146" },
+        { "vendor": "아테소(구.그녀가 사랑하는 순간)", "price": "200-385" },
+        { "vendor": "앤드류권스튜디오", "price": "130-480" },
+        { "vendor": "어뮤즈하우스 스튜디오", "price": "146" },
+        { "vendor": "어반 스튜디오", "price": "124-140" },
+        { "vendor": "온뜰에피움 스튜디오", "price": "108-124" },
+        { "vendor": "원세컨드스튜디오", "price": "85-158" },
+        { "vendor": "이브로제하우스", "price": "200-390" },
+        { "vendor": "이포토에세이", "price": "129" },
+        { "vendor": "지니어스 스튜디오", "price": "104-129" },
+        { "vendor": "지엥마지(SIEN MARGE)", "price": "190-380" },
+        { "vendor": "테라스 스튜디오", "price": "124" },
+        { "vendor": "테레지아 스튜디오(구.수에비뉴)", "price": "135-162" },
+        { "vendor": "페레스튜디오", "price": "135" },
+        { "vendor": "플레하우스 스튜디오", "price": "157" },
+        { "vendor": "플로우스튜디오", "price": "124-146" },
+        { "vendor": "해밀스튜디오", "price": "129" }
+      ],
+      "dress_helper_per_session": 25,
+      "dress_fitting_fee": 5.5,
+      "dress_note": "본식+촬영(토탈) / 본식 or 촬영 가격 분리 표기. 1회 25만원 헬퍼비",
+      "dress": [
+        { "vendor": "누벨드블랑", "main_plus_shoot_total": 162, "main_or_shoot": 140 },
+        { "vendor": "니콜스포사", "main_plus_shoot_total": 134, "main_or_shoot": 123 },
+        { "vendor": "더에이미", "main_plus_shoot_total": 173, "main_or_shoot": 151 },
+        { "vendor": "더케네스블랑", "main_plus_shoot_total": 118, "main_or_shoot": 96 },
+        { "vendor": "더화이트엘리자베스", "main_plus_shoot_total": 288, "main_or_shoot": 233 },
+        { "vendor": "라비노체", "main_plus_shoot_total": 180, "main_or_shoot": 170 },
+        { "vendor": "레이나모라", "main_plus_shoot_total": 135, "main_or_shoot": 125 },
+        { "vendor": "레이헬웨딩", "main_plus_shoot_total": 118, "main_or_shoot": 96 },
+        { "vendor": "로우케이", "main_plus_shoot_total": 118, "main_or_shoot": 107 },
+        { "vendor": "로즈로사", "main_plus_shoot_total": 217, "main_or_shoot": 195 },
+        { "vendor": "리디아브라이드", "main_plus_shoot_total": 118, "main_or_shoot": 107 },
+        { "vendor": "마리레나바이블랑", "main_plus_shoot_total": 70, "main_or_shoot": 60 },
+        { "vendor": "메라키웨딩", "main_plus_shoot_total": 173, "main_or_shoot": 140 },
+        { "vendor": "메이제인 바이 김영주", "main_plus_shoot_total": 140, "main_or_shoot": 118 },
+        { "vendor": "모네뜨아르", "main_plus_shoot_total": 85, "main_or_shoot": 74 },
+        { "vendor": "모니카블랑쉬", "main_plus_shoot_total": 173, "main_or_shoot": 162 },
+        { "vendor": "모리엠포티", "main_plus_shoot_total": 130, "main_or_shoot": 108 },
+        { "vendor": "벨에포크 드레스", "main_plus_shoot_total": 162, "main_or_shoot": 151 },
+        { "vendor": "보네르웨딩", "main_plus_shoot_total": 173, "main_or_shoot": 151 },
+        { "vendor": "보니타베일리", "main_plus_shoot_total": 130, "main_or_shoot": 108 },
+        { "vendor": "보디아이슬진", "main_plus_shoot_total": 190, "main_or_shoot": 162 }
+      ],
+      "makeup": [
+        { "vendor": "고바이씬", "tiers": { "실장": 55, "부원장": 66 }, "package_total": { "실장": 99, "부원장": 121 } },
+        { "vendor": "김청경헤어페이스", "tiers": { "실장": 80, "부원장": 82.5, "원장": 95.5 }, "package_total": { "실장": 129, "부원장": 143, "원장": 171 } },
+        { "vendor": "김할란뮤제네프", "tiers": { "실장": 68.5, "부원장": 74, "원장": 74.5 }, "package_total": { "실장": 107, "부원장": 118, "원장": 129 } },
+        { "vendor": "꾸띠원", "tiers": { "실장": 48, "부원장": 57.5, "원장": 63 }, "package_total": { "실장": 65, "부원장": 74, "원장": 85 } },
+        { "vendor": "끌로에 청담본점", "tiers": { "실장": 63, "부원장": 74, "원장": 85 }, "package_total": { "실장": 74, "부원장": 85, "원장": 96 } },
+        { "vendor": "로쉬 메이크업", "tiers": { "실장": 63, "부원장": 69.5, "원장": 74 }, "package_total": { "실장": 79.5, "부원장": 90.5, "원장": 101.5 } },
+        { "vendor": "멜시", "tiers": { "실장": 68.5, "부원장": 74, "원장": 101.5 }, "package_total": { "실장": 96, "부원장": 107, "원장": 151 } },
+        { "vendor": "밈 메이크업 (MIMM)", "tiers": { "실장": 74, "부원장": 85, "원장": 96 }, "package_total": { "실장": 90, "부원장": 100, "원장": 110 } },
+        { "vendor": "보이드바이박철", "tiers": { "실장": 52, "부원장": 55, "원장": 60 }, "package_total": { "실장": 65, "부원장": 75, "원장": 86 } },
+        { "vendor": "설영메이크업", "tiers": { "실장": 68.5, "부원장": 79.5, "원장": 85 } }
+      ]
+    },
+    {
+      "name": "베리굳웨딩컴퍼니",
+      "note": "스튜디오에 담당자 지정/야외/야간/기타옵션 가격 상세. 드레스/메이크업 헬퍼·앨범 추가 등 옵션 상세.",
+      "studio": [
+        { "vendor": "그가사랑하는순간", "base": "165-176", "options": { "담당자_지정": "22-110" }, "extra": "드레스 별수 1벌당 22, 앨범장수 1장당 3.3, 수정본 컨펌 횟수 3회부터 1회당 5.5, 액자변경 22만원-, 선수정본 5장당 5.5, 들러리 촬영 1인 22" },
+        { "vendor": "그레이스케일", "base": "143-154", "options": { "담당자_지정": "11-88", "야외": 22 }, "extra": "드레스 별수 1벌당 11, 앨범 장수 1장당 3.3, 수정본 컨펌 11, 액자변경 33-55, 선수정본 1.1" },
+        { "vendor": "글랑디스튜디오", "base": "143", "options": { "담당자_지정": 22, "야간": 11 } },
+        { "vendor": "노아고즈", "base": "180-240", "options": { "담당자_지정": "11-22", "야외": "22-" } },
+        { "vendor": "노우드하우스", "base": "220", "options": { "담당자_지정": "11-110", "야외": "33-66", "야간": 33 } },
+        { "vendor": "노트레세느", "base": "153-198", "options": { "담당자_지정": "11-55" } },
+        { "vendor": "느와르블랑하우스", "base": "185-380", "options": { "담당자_지정": "11-55" } },
+        { "vendor": "디하우스", "base": "154-176", "options": { "담당자_지정": "22-99", "야간": 22 } },
+        { "vendor": "라뮤즈스튜디오", "base": "143-154", "options": { "담당자_지정": 22, "야외": 33, "야간": 11 } },
+        { "vendor": "레이디로즈", "base": "154-176", "options": { "담당자_지정": "33-55", "야외": 22 } },
+        { "vendor": "로그에이", "base": "30p기준 330", "options": { "담당자_지정": "55-110" } }
+      ],
+      "dress_helper_per_session": 25,
+      "dress_fitting_fee": 5.5,
+      "dress": [
+        { "vendor": "누벨드블랑", "main_plus_shoot_total": 125, "main_only": 115, "options": "블랙라벨:66 / 프리미엄:88 / 시그니처:110" },
+        { "vendor": "더에이미", "main_plus_shoot_total": 118, "main_only": 107 },
+        { "vendor": "레이헬웨딩", "main_plus_shoot_total": 118, "main_only": 107, "options": "블랙라벨:22-55 / 골드라벨:66-150" },
+        { "vendor": "렌느브라이덜", "main_plus_shoot_total": 105, "main_only": 95 },
+        { "vendor": "로브마지오", "main_plus_shoot_total": 110, "main_only": 100, "options": "프리미엄:55" },
+        { "vendor": "로자스포사", "main_plus_shoot_total": 122, "main_only": 100, "options": "블랙라벨:66 / 아뜰리에프리미엄:110", "dress_helper": 22 },
+        { "vendor": "루비나엘웨딩", "main_plus_shoot_total": 96, "main_only": 85, "options": "프리미엄/골드라벨:30-80" },
+        { "vendor": "르블랑", "main_plus_shoot_total": 185, "main_only": 175 },
+        { "vendor": "리디아브라이드", "main_plus_shoot_total": 118, "main_only": 107, "options": "블랙라벨:55-88 / 프리미엄:88-132" },
+        { "vendor": "마리에드오늘", "main_plus_shoot_total": 115, "main_only": 105, "options": "블랙라벨:50 / 프리미엄:77" },
+        { "vendor": "마틴드세븐", "main_plus_shoot_total": 120, "main_only": 110, "options": "블랙라벨:80 / 시그니처/클로아:120-" },
+        { "vendor": "메라키웨딩", "main_plus_shoot_total": 129, "main_only": 118, "options": "프리미엄:33- / 시그니처:55-" },
+        { "vendor": "메이제인바이김영주", "main_plus_shoot_total": 150, "main_only": 140, "options": "블랙라벨:30-100 / 시그니처:100-" },
+        { "vendor": "모니카블랑쉬", "main_plus_shoot_total": 190, "main_only": 180, "options": "블랙라벨:50-100 / 스페셜:200-400" },
+        { "vendor": "벨에포크", "main_plus_shoot_total": 175, "main_only": 165, "options": "시그니처:88 / 스페셜라인:110-220" },
+        { "vendor": "보니타베일리", "main_plus_shoot_total": 160, "main_only": 140, "options": "프리미엄:55- / 꾸뜨르:88-" },
+        { "vendor": "브라이드K", "main_plus_shoot_total": 105, "main_only": 90, "options": "22-55" },
+        { "vendor": "브라이드로체", "main_plus_shoot_total": 140, "main_only": 129, "options": "시그니처:50 / 익스클로시브:100-150 / 블랙라벨:180-250" },
+        { "vendor": "브라이드메이", "main_plus_shoot_total": 70, "main_only": 60, "options": "시그니처:60-" },
+        { "vendor": "브라이드벨라", "main_plus_shoot_total": 75, "main_only": 65, "options": "시그니처:60-80" }
+      ],
+      "makeup_note": "실장직급 기준가격, 부원장/원장 등급 변경 시 추가금. 패키지 동시계약 시 추가 할인",
+      "makeup": [
+        { "vendor": "꾸띠원", "main_plus_shoot": 84, "main_only": 66, "early_start_extra": 5.5, "early_start_time_extra": 11, "after_5pm": "22 (4시/5시 30분)/(5시/5시 30분 11)" },
+        { "vendor": "로나(구.드니)", "main_plus_shoot": 95, "early_start_extra": 5.5, "after_5pm_extra": 12, "wedding_makeup_addon": "여혼주:22 남혼주:12.2" },
+        { "vendor": "로쉬", "main_plus_shoot": 88, "main_only": 80, "early_start_extra": 5.5, "after_5pm_extra": 14.3, "wedding_makeup_addon": "여혼주:25 남혼주:9.9" },
+        { "vendor": "메이븐", "main_plus_shoot": 88, "main_only": 75, "early_start_extra": 5.5, "after_5pm_extra": 11, "wedding_makeup_addon": "여혼주:25 남혼주:8.8" },
+        { "vendor": "밈웨딩", "main_plus_shoot": 120, "main_only": 100, "early_start_extra": 5.5, "after_5pm_extra": 15, "wedding_makeup_addon": "여혼주:33 남혼주:11" },
+        { "vendor": "보이드바이박철", "main_plus_shoot": 85, "main_only": 77, "early_start_extra": 5.5, "after_5pm_extra": 10, "wedding_makeup_addon": "여혼주:20 남혼주:6.6" },
+        { "vendor": "봄살롱", "main_plus_shoot": 95, "main_only": 84, "after_5pm_extra": 17, "wedding_makeup_addon": "여혼주:25 남혼주:8.8" },
+        { "vendor": "부티크밸by민아", "main_plus_shoot": 95, "main_only": 84, "early_start_extra": 5.5, "after_5pm_extra": 10, "wedding_makeup_addon": "여혼주:22 남혼주:8.8" },
+        { "vendor": "비기닝", "main_plus_shoot": 88, "main_only": 80, "early_start_extra": 5.5, "after_5pm_extra": "16-26", "wedding_makeup_addon": "여혼주:22 남혼주:8" },
+        { "vendor": "알루", "main_plus_shoot": 90, "main_only": 80, "early_start_extra": 5.5, "after_5pm_extra": 11, "wedding_makeup_addon": "여혼주:20 남혼주:6.6" },
+        { "vendor": "앤드유", "main_plus_shoot": 100, "main_only": 88, "early_start_extra": 5.5, "after_5pm_extra": 12, "wedding_makeup_addon": "여혼주:28 남혼주:8.8" },
+        { "vendor": "유림메이크업앤헤어", "main_plus_shoot": 84, "main_only": 75, "early_start_extra": 5.5, "after_5pm_extra": 13, "wedding_makeup_addon": "여혼주:20 남혼주:6.6" }
+      ]
+    },
+    {
+      "name": "다이렉트컴즈",
+      "note": "스튜디오 상세 옵션 (담당자지정/야외야간/의상추가) 풍부. 메이크업도 옵션 풍부.",
+      "studio": [
+        { "vendor": "ST쩡우", "base": 124, "options": { "담당자_지정": 10, "야외_야간": "야간 로드스냅 22 (러블리버전 촬영 가능)" }, "extra": "선수정본 5장에 5.5, 촬영의상추가: 캐주얼 1벌당 5, 앨범 페이지 추가: 1페이지당 3.3" },
+        { "vendor": "구호", "base": 124, "options": { "담당자_지정": 20, "야외_야간": "로드씬 11, 야간전구씬 11" }, "extra": "선수정본: 5장 11/8장 15, 촬영의상추가: 1벌당 5.5 (단, 대여드레스의 경우 종류별로 상이), 앨범페이지추가: 1페이지당 3.3" },
+        { "vendor": "그림비", "base": 147, "options": { "야외_야간": "야간씬 11 (오후타임 야간씬 필수)" }, "extra": "촬영의상추가: 1벌당 11, 앨범페이지추가: 1페이지당 3.3" },
+        { "vendor": "더멜라스튜디오(구.그날의기억)", "base": 134, "options": { "야외_야간": "야간+로드씬 15 (주말오후타임필수), 로드씬 10" } },
+        { "vendor": "더청담스튜디오", "base": 154, "options": { "담당자_지정": 20, "야외_야간": "야간씬 11 (오후타임필수)" } },
+        { "vendor": "라망스튜디오", "base": 139, "options": { "담당자_지정": "20-50 (직급별 상이)", "야외_야간": "로드씬: 주말 11 / 루프탑: 주말 11" } },
+        { "vendor": "라뮤즈스튜디오", "base": 150, "options": { "야외_야간": "야간씬 11, 야외 물의정원 33 (사전예약필수)" } },
+        { "vendor": "로라스튜디오", "base": 154, "options": { "담당자_지정": 11, "야외_야간": "야간옥상씬(전구) 16.5, 야외로드씬 16.5" } },
+        { "vendor": "로렌하우스", "base": 134, "options": { "야외_야간": "로드씬 22 (오전타임만촬영가능), 야간씬 22" } },
+        { "vendor": "로마스튜디오", "base": 304, "options": { "야외_야간": "야외촬영 33 (1시간/1팟), 야외장소: 서울숲, 잠수교, 반포대교, 도산공원" } },
+        { "vendor": "로이스튜디오", "base": 150, "options": { "야외_야간": "야간씬 11" } },
+        { "vendor": "루미에르레브", "base": 159, "options": { "담당자_지정": "대표/이사 33, 실장 22, 팀장 11(추정)" } }
+      ],
+      "dress_helper_per_session": 25,
+      "dress": [
+        { "vendor": "니콜스포사", "shoot": 121, "main": 121, "options": "디자인추가:66- / 퍼스트웨어:33- / 기타옵션: 재기봉비 11" },
+        { "vendor": "드에메", "shoot": 120, "main": 110, "options": "디자인추가:10-20 / 드레스 추가대여:25" },
+        { "vendor": "로즈포사", "shoot": 194, "main": 187, "options": "드레스 추가대여:50 / 재기봉비 11" },
+        { "vendor": "루이즈블랑", "shoot": 154, "main": 154, "options": "디자인추가:66-110 / 퍼스트웨어:55 / 드레스 추가대여:33-55" },
+        { "vendor": "르멜레마이노비아", "shoot": 220, "main": 220, "options": "디자인추가:55-88 / 퍼스트웨어:33-66" },
+        { "vendor": "메라퀘딩", "shoot": 242, "main": 242, "options": "디자인추가:55-143 / 퍼스트웨어:55-99 / 재기봉비 5.5" },
+        { "vendor": "브라이드수지", "shoot": 110, "main": 110, "options": "디자인추가:88-100 / 드레스 추가대여:25" },
+        { "vendor": "브라이드도제", "shoot": 121, "main": 121, "options": "퍼스트웨어:50-80 / 드레스 추가대여:20-30 / 재기봉비 5.5" },
+        { "vendor": "브라이드손웅이", "shoot": 198, "main": 198, "options": "디자인추가:33-55 / 재기봉비 11" },
+        { "vendor": "쇼노", "shoot": 187, "main": 187, "options": "디자인추가:44-88 / 퍼스트웨어:33" },
+        { "vendor": "시즌알렉스", "shoot": 198, "main": 198, "options": "디자인추가:55-110 / 드레스 추가대여:66-110 / 재기봉비 5.5" },
+        { "vendor": "에밀린", "shoot": 350, "main": 350, "options": "디자인추가:110-220 / 드레스 추가대여:77-110 / 재기봉비 11" }
+      ],
+      "makeup_note": "메이크업 얼리스타트(오전 6시 이하) 기본 추가 서비스 (오전 8시 이전인 경우 별도 비용 발생)",
+      "makeup": [
+        { "vendor": "헤어인준오", "tiers": { "실장": 49.5, "부원장": 66, "원장": 99 }, "early_start": "사용료 16.5 / 보증금 35.2", "after_5pm": "여혼주 27.5 / 남혼주 8.8" },
+        { "vendor": "헤이미", "tiers": { "실장": 49.5, "부원장": 66, "원장": 88, "본식+촬영": 132 }, "early_start": "은닉부담 1회 5.5", "yo_addon": "여혼주 16.5-27.5 / 남혼주 8.8" },
+        { "vendor": "헤어아이미", "tiers": { "실장": 44, "부원장": 66, "원장": 88, "본식+촬영": 132 }, "early_start": "사용료 22 / 보증금 9.9" },
+        { "vendor": "모래유", "tiers": { "실장": 49.5, "부원장": 77, "원장": 99 } },
+        { "vendor": "모비", "tiers": { "실장": 44, "부원장": 77, "원장": 88, "본식+촬영": 132 }, "early_start": "지정사용료 11", "yo_addon": "여혼주 22 / 남혼주 6.6" },
+        { "vendor": "위치이론데이", "tiers": { "실장": 49.5, "부원장": 77, "원장": 88, "본식+촬영": 132 }, "early_start": "지정사용료 1회 5.5", "yo_addon": "사용료 11 / 보증금 6.6" },
+        { "vendor": "유럽피언이건반비", "tiers": { "실장": 71.5, "부원장": 88, "원장": 110 }, "early_start": "사용료 20 / 보증금 22 / 지정 사용료 5.5", "yo_addon": "여혼주 38.5 / 남혼주 8.8" },
+        { "vendor": "이건민포제천담", "tiers": { "실장": 71.5, "부원장": 88, "원장": 110 } },
+        { "vendor": "재훈리", "tiers": { "실장": 44, "부원장": 88, "원장": 99 }, "early_start": "실장급 5.5 / 부원장급 11" },
+        { "vendor": "정남", "tiers": { "실장": 71.5, "부원장": 88, "원장": 110 } },
+        { "vendor": "정남웰리스", "tiers": { "실장": 71.5, "부원장": 88, "원장": 110 } },
+        { "vendor": "제니라이우스", "tiers": { "실장": 60.5, "부원장": 75, "원장": 88 }, "early_start": "직급별 11" },
+        { "vendor": "제이아우스", "tiers": { "실장": 49.5, "부원장": 66, "원장": 88 } }
+      ]
+    }
+  ],
+  "vendor_overlaps": {
+    "studio": [
+      {
+        "vendor": "ST쩡우",
+        "appears_in": ["제이웨딩", "케이앤엠", "다이렉트컴즈"],
+        "prices": { "제이웨딩": 117, "케이앤엠": "102-118", "다이렉트컴즈": 124 },
+        "comment": "케이앤엠이 가장 저렴(최저 102), 다이렉트가 가장 비싸나 옵션 풍부."
+      },
+      {
+        "vendor": "그레이스케일",
+        "appears_in": ["제이웨딩", "케이앤엠", "베리굳"],
+        "prices": { "제이웨딩": "150-172", "케이앤엠": "101.5-157", "베리굳": "143-154" },
+        "comment": "케이앤엠 최저가, 제이웨딩 시간대별 인상 폭 큼."
+      },
+      {
+        "vendor": "글렌하우스",
+        "appears_in": ["제이웨딩", "하우투", "케이앤엠"],
+        "prices": { "제이웨딩": "194-216", "하우투": 177, "케이앤엠": "179-201" },
+        "comment": "하우투가 가장 저렴."
+      },
+      {
+        "vendor": "디하우스",
+        "appears_in": ["제이웨딩", "하우투", "베리굳"],
+        "prices": { "제이웨딩": "161-183", "하우투": "166-177", "베리굳": "154-176" },
+        "comment": "베리굳이 최저, 옵션 가격도 명시(담당자 지정 22-99)."
+      },
+      {
+        "vendor": "랑게(구.르노브)",
+        "appears_in": ["제이웨딩", "하우투", "케이앤엠"],
+        "prices": { "제이웨딩": 150, "하우투": 166, "케이앤엠": 146 },
+        "comment": "케이앤엠 최저, 하우투 최고. 약 13.7% 차이."
+      },
+      {
+        "vendor": "노우드(하우스)",
+        "appears_in": ["하우투", "케이앤엠", "베리굳"],
+        "prices": { "하우투": "174 (세미) - 264", "케이앤엠": "49-220", "베리굳": 220 },
+        "comment": "케이앤엠 최저(세미 패키지 추정), 정가는 비슷."
+      },
+      {
+        "vendor": "노아고즈",
+        "appears_in": ["케이앤엠", "베리굳"],
+        "prices": { "케이앤엠": "180-370", "베리굳": "180-240" },
+        "comment": "기본가는 같으나 케이앤엠은 상위 옵션까지 폭이 큼."
+      },
+      {
+        "vendor": "그가사랑하는순간",
+        "appears_in": ["케이앤엠", "베리굳"],
+        "prices": { "케이앤엠": "165-180", "베리굳": "165-176" },
+        "comment": "거의 동일."
+      },
+      {
+        "vendor": "느와르블랑하우스",
+        "appears_in": ["케이앤엠", "베리굳"],
+        "prices": { "케이앤엠": 220, "베리굳": "185-380" },
+        "comment": "베리굳에서 시작가가 더 저렴(185), 상위 옵션은 380까지."
+      },
+      {
+        "vendor": "라뮤즈스튜디오",
+        "appears_in": ["베리굳", "다이렉트컴즈"],
+        "prices": { "베리굳": "143-154", "다이렉트컴즈": 150 }
+      },
+      {
+        "vendor": "로그에이",
+        "appears_in": ["케이앤엠", "베리굳"],
+        "prices": { "케이앤엠": "130-440", "베리굳": "30p기준 330" }
+      },
+      {
+        "vendor": "그날의기억(=더멜라)",
+        "appears_in": ["하우투", "다이렉트컴즈"],
+        "prices": { "하우투": 132, "다이렉트컴즈": 134 },
+        "comment": "다이렉트는 '더멜라스튜디오'로 리브랜딩."
+      }
+    ],
+    "dress": [
+      {
+        "vendor": "누벨드블랑",
+        "appears_in": ["제이웨딩", "케이앤엠", "베리굳"],
+        "main_plus_shoot": { "제이웨딩": 161, "케이앤엠": 162, "베리굳": 125 },
+        "comment": "베리굳 토탈가 22% 저렴(125 vs 161)."
+      },
+      {
+        "vendor": "니콜스포사",
+        "appears_in": ["제이웨딩", "케이앤엠", "다이렉트"],
+        "main_plus_shoot": { "제이웨딩": 139, "케이앤엠": 134, "다이렉트": 121 },
+        "comment": "다이렉트 최저."
+      },
+      {
+        "vendor": "더에이미",
+        "appears_in": ["제이웨딩", "케이앤엠", "베리굳"],
+        "main_plus_shoot": { "제이웨딩": 183, "케이앤엠": 173, "베리굳": 118 },
+        "comment": "베리굳이 약 35% 저렴."
+      },
+      {
+        "vendor": "더케네스블랑",
+        "appears_in": ["제이웨딩", "케이앤엠"],
+        "main_plus_shoot": { "제이웨딩": 128, "케이앤엠": 118 },
+        "comment": "케이앤엠 약간 더 저렴."
+      },
+      {
+        "vendor": "레이나모라",
+        "appears_in": ["제이웨딩", "케이앤엠"],
+        "main_plus_shoot": { "제이웨딩": 150, "케이앤엠": 135 }
+      },
+      {
+        "vendor": "모네뜨아르",
+        "appears_in": ["하우투", "케이앤엠"],
+        "main_plus_shoot": { "하우투": 121, "케이앤엠": 85 },
+        "comment": "케이앤엠 약 30% 저렴."
+      },
+      {
+        "vendor": "모니카블랑쉬",
+        "appears_in": ["하우투", "케이앤엠", "베리굳"],
+        "main_plus_shoot": { "하우투": 209, "케이앤엠": 173, "베리굳": 190 }
+      },
+      {
+        "vendor": "모리엠포티",
+        "appears_in": ["하우투", "케이앤엠"],
+        "main_plus_shoot": { "하우투": 165, "케이앤엠": 130 }
+      },
+      {
+        "vendor": "보네르(웨딩)",
+        "appears_in": ["하우투", "케이앤엠"],
+        "main_plus_shoot": { "하우투": 198, "케이앤엠": 173 }
+      },
+      {
+        "vendor": "보니타베일리",
+        "appears_in": ["하우투", "케이앤엠", "베리굳"],
+        "main_plus_shoot": { "하우투": 176, "케이앤엠": 130, "베리굳": 160 }
+      },
+      {
+        "vendor": "브라이드케이",
+        "appears_in": ["제이웨딩", "하우투"],
+        "main_plus_shoot": { "제이웨딩": 106, "하우투": 121 }
+      },
+      {
+        "vendor": "세인트",
+        "appears_in": ["제이웨딩", "하우투"],
+        "main_plus_shoot": { "제이웨딩": 150, "하우투": 154 }
+      },
+      {
+        "vendor": "아비가일",
+        "appears_in": ["제이웨딩", "하우투"],
+        "main_plus_shoot": { "제이웨딩": 117, "하우투": 132 }
+      },
+      {
+        "vendor": "메이제인 (바이 김영주)",
+        "appears_in": ["하우투", "케이앤엠", "베리굳"],
+        "main_plus_shoot": { "하우투": 165, "케이앤엠": 140, "베리굳": 150 }
+      },
+      {
+        "vendor": "레이헬웨딩",
+        "appears_in": ["케이앤엠", "베리굳"],
+        "main_plus_shoot": { "케이앤엠": 118, "베리굳": 118 }
+      }
+    ],
+    "makeup": [
+      {
+        "vendor": "꾸띠웜/꾸띠원",
+        "appears_in": ["제이웨딩", "하우투", "케이앤엠", "베리굳"],
+        "원장급": { "제이웨딩": 73, "하우투": 68, "케이앤엠": 63, "베리굳": 63 },
+        "comment": "케이앤엠/베리굳 최저(63), 제이웨딩 가장 비쌈."
+      },
+      {
+        "vendor": "로쉬",
+        "appears_in": ["제이웨딩", "케이앤엠", "베리굳"],
+        "원장급": { "제이웨딩": 84, "케이앤엠": 74, "베리굳_본식+촬영": 88 },
+        "comment": "케이앤엠 단가 최저."
+      },
+      {
+        "vendor": "밈/밈mimm/밈웨딩",
+        "appears_in": ["제이웨딩", "케이앤엠", "베리굳"],
+        "원장급": { "제이웨딩": 95, "케이앤엠": 96, "베리굳_본식+촬영": 120 }
+      },
+      {
+        "vendor": "설영",
+        "appears_in": ["제이웨딩", "하우투", "케이앤엠"],
+        "원장급": { "제이웨딩": "?", "하우투": 90, "케이앤엠": 85 },
+        "comment": "케이앤엠 최저."
+      },
+      {
+        "vendor": "멜시",
+        "appears_in": ["하우투", "케이앤엠"],
+        "원장급": { "하우투": 107, "케이앤엠": 101.5 }
+      },
+      {
+        "vendor": "보이드바이박철",
+        "appears_in": ["케이앤엠", "베리굳"],
+        "원장급": { "케이앤엠": 60, "베리굳_본식+촬영": 85 }
+      },
+      {
+        "vendor": "김할란뮤제네프",
+        "appears_in": ["제이웨딩", "케이앤엠"],
+        "원장급": { "제이웨딩": 89.5, "케이앤엠": 74.5 }
+      }
+    ]
+  }
+}

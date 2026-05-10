@@ -1,0 +1,9 @@
+{
+    "dependencies": [
+        "graph.py"
+    ],
+    "graphs": {
+        "wedding_planner": "./graph.py:graph"
+    },
+    "env": ".env"
+}

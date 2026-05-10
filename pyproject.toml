@@ -1,0 +1,20 @@
+[project]
+name = "wedding-teacher"
+version = "0.1.0"
+description = "결혼 준비 첫걸음을 함께 짚어주는 Wedding Teacher LangGraph 에이전트"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain[openai]>=0.3.27",
+    "langgraph>=0.6.7",
+    "langgraph-cli[inmem]>=0.4.2",
+    "langsmith>=0.4.28",
+    "openai[aiohttp]>=1.107.3",
+    "python-dotenv>=1.1.1",
+    "streamlit>=1.40.0",
+    "tiktoken>=0.11.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.1",
+]
