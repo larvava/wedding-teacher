@@ -1,7 +1,7 @@
 # Wedding Teacher
 
 결혼 준비 첫걸음을 함께 짚어주는 LangGraph 챗 에이전트.
-청담·강남 결혼준비대행사 5곳의 스드메 가격과 105개+ 샵의 스타일/인기도 데이터를 자연어로 추천·비교·해설해 준다.
+청담·강남 결혼준비대행사 5곳의 스드메 가격(594 entries) 과 400+ 샵의 스타일/인기도 데이터를 자연어로 추천·비교·해설해 준다.
 
 ## 과제 요구사항 체크리스트
 
@@ -44,10 +44,10 @@
 
 | 파일 | 내용 | 출처 |
 |---|---|---|
-| `data/sdm_pricing.json` | 5개 대행사 × 80+ vendor 가격 (스/드/메, 만원 단위) | 결혼준비대행 업체 가격정보 (2025-10-10, 5개사) |
-| `data/dress_styles.json` | 47/58 vendor 스타일·인기도 | 다이렉트결혼준비, 아이웨딩, 웨딩북, 웨딩랩더하기, 결직웨딩 |
-| `data/studio_styles.json` | 36/42 vendor 스타일·인기도 | 동상 + keyzard, 웨딩21 |
-| `data/makeup_styles.json` | 22/36 vendor 스타일·인기도 | 동상 + 마리끌레르, 얼루어 |
+| `data/sdm_pricing.json` | 5개 대행사 × 594 entries (Studio 247 / Dress 224 / Makeup 123) | 결혼준비대행 업체 가격정보 (2025-10-10, 5개사) |
+| `data/dress_styles.json` | 135 vendor 스타일·인기도 (BEST 26개) | 다이렉트결혼준비, 아이웨딩, 웨딩북, 웨딩랩더하기, 결직웨딩 |
+| `data/studio_styles.json` | 174 vendor 스타일·인기도 (BEST 20개) | 동상 + keyzard, 웨딩21 |
+| `data/makeup_styles.json` | 95 vendor 스타일·인기도 (BEST 19개) | 동상 + 마리끌레르, 얼루어 |
 
 가격은 **만원 단위, VAT 포함, 성수기 기준**. 스튜디오 기본은 앨범 20p / 액자 20R.
 
