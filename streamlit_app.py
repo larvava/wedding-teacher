@@ -251,26 +251,6 @@ EXAMPLES = [
     "시작바이이명순에 대해 알려줘",
 ]
 
-input_text = None
-
-if not st.session_state.messages:
-    st.markdown("**예시 질문**")
-    cols = st.columns(2)
-    for i, ex in enumerate(EXAMPLES):
-        if cols[i % 2].button(ex, key=f"ex_{i}", use_container_width=True):
-            input_text = ex
-
-
-for m in st.session_state.messages:
-    with st.chat_message(m["role"]):
-        st.markdown(m["content"])
-
-
-typed = st.chat_input("어떤 스타일·예산·고민이 있나요?")
-if typed:
-    input_text = typed
-
-
 def _collect_body_info() -> dict:
     height = st.session_state.get("body_height", "선택 안 함")
     bust = st.session_state.get("body_bust", "선택 안 함")
@@ -288,6 +268,19 @@ def _collect_body_info() -> dict:
     return info
 
 
+# 1) 기존 대화 렌더 (이전 턴들)
+for m in st.session_state.messages:
+    with st.chat_message(m["role"]):
+        st.markdown(m["content"])
+
+
+# 2) 입력 수집 — chat_input 또는 예시 클릭에서 큐잉된 pending_input
+typed = st.chat_input("어떤 스타일·예산·고민이 있나요?")
+pending = st.session_state.pop("pending_input", None)
+input_text = typed or pending
+
+
+# 3) 입력 처리 — 사용자 메시지와 응답을 인라인 렌더 + 세션 적재
 if input_text:
     st.session_state.messages.append({"role": "user", "content": input_text})
     with st.chat_message("user"):
@@ -315,6 +308,17 @@ if input_text:
                 )
             st.markdown(response)
     st.session_state.messages.append({"role": "assistant", "content": response})
+
+
+# 4) 예시 버튼 — 대화 비어있을 때만. 클릭 시 pending_input 큐잉 후 rerun.
+#    (rerun 으로 위쪽 처리 블록이 즉시 실행되며, 다음 렌더부터 messages 가 차서 버튼이 사라진다)
+if not st.session_state.messages:
+    st.markdown("**예시 질문**")
+    cols = st.columns(2)
+    for i, ex in enumerate(EXAMPLES):
+        if cols[i % 2].button(ex, key=f"ex_{i}", use_container_width=True):
+            st.session_state.pending_input = ex
+            st.rerun()
 
 
 st.markdown(
