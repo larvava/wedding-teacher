@@ -17,4 +17,13 @@ dependencies = [
 [dependency-groups]
 dev = [
     "ipykernel>=6.30.1",
+    "pytest>=8.3.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "unit: 외부 호출 없는 순수 단위 테스트",
+    "integration: 그래프/서브그래프 invoke 테스트 (OpenAI API 호출)",
+    "judge: AI-as-judge 평가 (OpenAI API 호출, 비결정적)",
 ]

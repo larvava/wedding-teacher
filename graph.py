@@ -74,10 +74,15 @@ def _extract_min_price(entry: dict, category: str):
 
 
 def _normalize_name(name: str) -> str:
-    n = re.sub(r"\([^)]*\)", "", name).strip()
+    """표기차 통일 — 괄호 내용은 본 이름에 합치고 공백 제거.
+
+    "엘리자베스 (럭스)" / "엘리자베스 럭스" / "엘리자베스럭스" → "엘리자베스럭스".
+    """
+    n = re.sub(r"\(([^)]*)\)", r"\1", name)
+    n = re.sub(r"\s+", "", n)
     for suffix in ("스튜디오", "메이크업", "헤어", "웨딩"):
         if n.endswith(suffix) and len(n) > len(suffix) + 1:
-            n = n[: -len(suffix)].strip()
+            n = n[: -len(suffix)]
     return n
 
 

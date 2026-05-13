@@ -20,6 +20,7 @@
 | 1 | 병렬 실행 (Send API) | ✅ | `category == "all"` 일 때 `retrieve_per_category` 를 스튜디오·드레스·메이크업 3 카테고리에 **Send 로 fan-out**, `Annotated[list[dict], operator.add]` 누적 reducer 로 결과 합침 |
 | 2 | 메모리 기능 | ✅ | Streamlit `session_state` 에 대화 기록 보관, 매 턴 `chat_history` 로 그래프에 전달 → 후속 질문("그 중에 가장 저렴한건?") 처리 가능 |
 | 3 | 여러 개의 Tool 연동 | ❌ | 현재 `lookup_vendor` 1개 (필수 요건은 충족) |
+| 4 | PyTest 노드 테스트 + AI-as-judge 평가 | ✅ | `tests/test_nodes.py` (도구·헬퍼·라우팅 26 케이스) + `tests/test_ai_judge.py` (`gpt-4o` 심판이 faithfulness/relevance/tone/formatting 4 차원 채점, 4 케이스) |
 
 ### Conditional Edge 분기 상세
 
@@ -59,4 +60,12 @@ cp .env.example .env   # OPENAI_API_KEY 채우기
 
 uv run streamlit run streamlit_app.py   # 메인 UI (http://localhost:8501)
 uv run langgraph dev                    # LangGraph Studio (그래프 시각화)
+```
+
+## 테스트
+
+```bash
+uv run pytest -m unit    # 노드/도구 단위 테스트 (API 호출 없음)
+uv run pytest -m judge   # AI-as-judge 품질 평가 (OpenAI API 호출)
+uv run pytest            # 전체
 ```
