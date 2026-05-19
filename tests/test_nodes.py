@@ -157,6 +157,17 @@ def test_route_category_single_dispatches_one():
     assert sends[0].arg["limit"] == 10
 
 
+@pytest.mark.unit
+def test_route_general_intent_goes_to_style_advice():
+    """샵 요청 없이 스타일/체형 조언만 묻는 경우 style_advice 로 라우팅."""
+    state = {"intent": {"intent_type": "general", "category": "dress"}}
+
+    sends = route_after_intent(state)
+
+    assert len(sends) == 1
+    assert sends[0].node == "style_advice"
+
+
 # --- _looks_like_real_vendor ----------------------------------------------
 
 

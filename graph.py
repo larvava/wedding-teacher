@@ -176,7 +176,13 @@ INTENT_PROMPT = """당신은 한국 결혼 준비 상담 챗봇의 의도 파서
   ❌ 잘못된 예: "비즈 드레스 BEST", "인기 스튜디오", "유명한 메이크업", "실크 드레스 맛집", "BEST", "추천샵"
   ✅ 올바른 예: "벨에포크", "시작바이이명순", "누벨드블랑", "더청담스튜디오"
   — 의심스러우면 null 로 두세요.
-- vendor_mention 이 채워졌을 때만 intent_type="explain". 비어있으면 intent_type 은 "recommend" 또는 "general".
+- intent_type 결정:
+  * vendor_mention 이 채워졌을 때 → "explain"
+  * **샵·매장·가격 추천 요청**("추천", "어디", "샵", "매장", "BEST", "맛집", "견적") → "recommend"
+  * **스타일·체형·개념 조언만** 묻는 경우 (vendor 추천 요청 없음) → "general"
+    ✅ "general" 예: "내 체형에 어울리는 드레스는?", "보트넥이랑 V넥 중에 뭐가 나아?", "키 작은 사람은 어떤 실루엣?", "성수기 가격 얼마나 올라?", "스드메가 뭐야?"
+    ✅ "recommend" 예: "200만원 안쪽 실크 드레스 추천", "감성 자연광 스튜디오 어디 있어?", "비즈 드레스 BEST"
+  * 사용자가 "샵도 알려줘" / "그럼 어디서 입어볼 수 있어?" 같이 명시적으로 요청하면 "recommend".
 - 카테고리가 명시 안되면 "all".
 - "인기있는", "유명한", "BEST", "맛집" 표현 → popularity_min 2 또는 3.
 - "200만원" → 200, "5천만원" → 5000.
@@ -367,6 +373,7 @@ def tool_lookup(state: State):
 
 3. 추천 시 가짜 가격 만들지 마세요. 가격 모르면 이름·스타일만.
 4. 가격 단위 만원, 범위는 하이픈(-), 물결(~) 금지, 이모지 금지.
+   마크다운 가능 (표·목록·항목 제목 볼드 등). 단 `#`/`##`/`###` 같은 헤드라인은 사용 금지 — 헤드라인 대신 줄바꿈으로 단락 구분.
 5. 마지막에 "이런 점도 알아두세요" 짧은 가르침 한 줄."""
     )
     return {"response": _append_daily_tip(final.content)}
@@ -386,7 +393,7 @@ RECOMMEND_PROMPT = """{system}
 - 사용자가 시즌·시간대를 언급하면 가격 영향(성수기 +15-30%, 평일 20-30% 할인 등) 짧게 부연.
 - 가격은 모두 "만원" 단위. 1-2 문장 도입 후 추천 이어가기.
 - 가격 범위는 '20-35%' 처럼 하이픈(-) 으로 표기. 물결(~)은 사용 금지.
-- 마크다운 가능. 이모지 금지.
+- 마크다운 가능 (표·목록·항목 제목의 볼드 등). 단 `#`/`##`/`###` 같은 헤드라인은 사용 금지 — 헤드라인 대신 줄바꿈으로 단락 구분. 이모지 금지.
 
 [참고 — 시즌·시간대 가격 영향]
 {season_timing}
@@ -445,6 +452,52 @@ def _format_body_info(body_info: dict) -> str:
     if body_info.get("highlights"):
         parts.append(f"강조하고 싶은 부분: {', '.join(body_info['highlights'])}")
     return " / ".join(parts) if parts else "(입력 없음)"
+
+
+STYLE_ADVICE_PROMPT = """{system}
+
+당신은 결혼 선생님으로서 학생(예비부부)에게 스타일·체형·개념을 가르치고 있습니다.
+사용자가 샵 추천이 아니라 **조언/개념**을 물었으니, 샵 이름·가격은 답에 넣지 말고 가이드만 차분히 설명해 주세요.
+
+[규칙]
+- 특정 vendor/샵 이름을 답변에 절대 포함하지 말 것. 가격도 언급하지 말 것.
+- 사용자가 체형 정보를 줬으면 그 체형에 맞춘 실루엣·네크라인·소매 형태를 우선 안내.
+- 항목 정리는 "1. 보트넥 — 단정해 보임" 처럼 짧은 제목 + 한 줄 설명.
+- 마크다운 가능 (목록·항목 제목 볼드 등). 단 `#`/`##`/`###` 같은 헤드라인 사용 금지.
+- 이모지 금지. 범위 표기는 하이픈(-), 물결(~) 금지.
+- 답변 끝에 한 줄: "원하시는 방향이 잡히면 그에 맞는 샵도 찾아드릴게요" 부드럽게 유도.
+
+[참고 — 체형별 드레스 가이드]
+{body_dress}
+
+[참고 — 시즌·시간대 가격 영향]
+{season_timing}
+
+[사용자 체형 정보]
+{body_info}
+
+[이전 대화]
+{history}
+
+[이번 사용자 메시지]
+{user_msg}
+
+답변:"""
+
+
+def style_advice(state: State):
+    """노드 5: vendor 검색 없이 스타일·체형·개념 조언만 답변."""
+    body_info = state.get("body_info") or {}
+    prompt = STYLE_ADVICE_PROMPT.format(
+        system=TEACHER_SYSTEM,
+        body_dress=body_dress_brief(),
+        season_timing=season_timing_brief(),
+        body_info=_format_body_info(body_info),
+        history=_format_history(state.get("chat_history", [])),
+        user_msg=state["user_input"],
+    )
+    response = llm.invoke(prompt)
+    return {"response": _append_daily_tip(response.content)}
 
 
 def recommend(state: State):
@@ -508,6 +561,9 @@ def route_after_intent(state: State):
     if vendor_mention and _looks_like_real_vendor(vendor_mention):
         return [Send("tool_lookup", state)]
 
+    if intent.get("intent_type") == "general":
+        return [Send("style_advice", state)]
+
     category = intent.get("category", "all")
     if category == "all":
         return [
@@ -524,15 +580,17 @@ graph_builder.add_node("parse_intent", parse_intent)
 graph_builder.add_node("tool_lookup", tool_lookup)
 graph_builder.add_node("retrieve_per_category", retrieve_per_category)
 graph_builder.add_node("recommend", recommend)
+graph_builder.add_node("style_advice", style_advice)
 
 graph_builder.add_edge(START, "parse_intent")
 graph_builder.add_conditional_edges(
     "parse_intent",
     route_after_intent,
-    ["tool_lookup", "retrieve_per_category"],
+    ["tool_lookup", "retrieve_per_category", "style_advice"],
 )
 graph_builder.add_edge("tool_lookup", END)
 graph_builder.add_edge("retrieve_per_category", "recommend")
 graph_builder.add_edge("recommend", END)
+graph_builder.add_edge("style_advice", END)
 
 graph = graph_builder.compile(name="wedding_planner")
