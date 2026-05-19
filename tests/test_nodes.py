@@ -11,6 +11,7 @@ from graph import (
     _candidates_for_category,
     _looks_like_real_vendor,
     _normalize_name,
+    _strip_existing_tip,
     lookup_vendor,
     route_after_intent,
 )
@@ -155,6 +156,20 @@ def test_route_category_single_dispatches_one():
     assert len(sends) == 1
     assert sends[0].arg["category"] == "dress"
     assert sends[0].arg["limit"] == 10
+
+
+@pytest.mark.unit
+@pytest.mark.parametrize(
+    "raw, expected",
+    [
+        ("본문\n\n---\n**오늘의 웨딩 지식**\n드레스 헬퍼비는 25만원...", "본문"),
+        ("본문 마지막 줄.\n\n오늘의 웨딩 지식 하트넥은 여성스러운 느낌...", "본문 마지막 줄."),
+        ("본문에 팁 블록 없음", "본문에 팁 블록 없음"),
+    ],
+)
+def test_strip_existing_tip_removes_trailing_tip_block(raw, expected):
+    """LLM 이 본문에 만들어 넣었거나 코드가 첨부한 '오늘의 웨딩 지식' 블록을 제거."""
+    assert _strip_existing_tip(raw) == expected
 
 
 @pytest.mark.unit

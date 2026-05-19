@@ -197,11 +197,34 @@ INTENT_PROMPT = """당신은 한국 결혼 준비 상담 챗봇의 의도 파서
 JSON:"""
 
 
+_TIP_BLOCK_RE = re.compile(
+    r"\n+\s*-*\s*\*?\*?\s*오늘의 웨딩 지식.*\Z",
+    re.DOTALL,
+)
+
+
+def _strip_existing_tip(text: str) -> str:
+    """LLM 이 답변 끝에 직접 만들어 넣은 '오늘의 웨딩 지식' 문단을 제거.
+
+    히스토리에 매 턴 팁이 붙어 있어서 모델이 패턴을 모방해 본문에 또 만들어 넣는
+    경우가 있다. 시스템이 한 번만 자동 첨부하도록 출력·히스토리 양쪽에서 잘라낸다.
+    """
+    if not text:
+        return text
+    return _TIP_BLOCK_RE.sub("", text).rstrip()
+
+
 def _format_history(history: list[dict], n: int = 4) -> str:
     if not history:
         return "(없음)"
     last = history[-n:]
-    return "\n".join(f"[{m['role']}] {m['content']}" for m in last)
+    lines = []
+    for m in last:
+        content = m["content"]
+        if m.get("role") == "assistant":
+            content = _strip_existing_tip(content)
+        lines.append(f"[{m['role']}] {content}")
+    return "\n".join(lines)
 
 
 def parse_intent(state: State):
@@ -308,7 +331,7 @@ def _normalize_ranges(text: str) -> str:
 
 
 def _append_daily_tip(text: str) -> str:
-    cleaned = _normalize_ranges(text or "")
+    cleaned = _normalize_ranges(_strip_existing_tip(text or ""))
     tip = _normalize_ranges(daily_tip())
     return f"{cleaned}\n\n---\n**오늘의 웨딩 지식**\n{tip}"
 
@@ -374,6 +397,7 @@ def tool_lookup(state: State):
 3. 추천 시 가짜 가격 만들지 마세요. 가격 모르면 이름·스타일만.
 4. 가격 단위 만원, 범위는 하이픈(-), 물결(~) 금지, 이모지 금지.
    마크다운 가능 (표·목록·항목 제목 볼드 등). 단 `#`/`##`/`###` 같은 헤드라인은 사용 금지 — 헤드라인 대신 줄바꿈으로 단락 구분.
+   답변에 "오늘의 웨딩 지식" 이라는 표현이나 그와 비슷한 닫는 팁 문단을 직접 쓰지 말 것. 마지막 팁은 시스템이 자동으로 한 줄 추가함.
 5. 마지막에 "이런 점도 알아두세요" 짧은 가르침 한 줄."""
     )
     return {"response": _append_daily_tip(final.content)}
@@ -394,6 +418,7 @@ RECOMMEND_PROMPT = """{system}
 - 가격은 모두 "만원" 단위. 1-2 문장 도입 후 추천 이어가기.
 - 가격 범위는 '20-35%' 처럼 하이픈(-) 으로 표기. 물결(~)은 사용 금지.
 - 마크다운 가능 (표·목록·항목 제목의 볼드 등). 단 `#`/`##`/`###` 같은 헤드라인은 사용 금지 — 헤드라인 대신 줄바꿈으로 단락 구분. 이모지 금지.
+- 답변에 "오늘의 웨딩 지식" 이라는 표현이나 그와 비슷한 닫는 팁 문단을 직접 쓰지 마세요. 마지막 팁은 시스템이 자동으로 한 줄 추가합니다.
 
 [참고 — 시즌·시간대 가격 영향]
 {season_timing}
@@ -465,6 +490,7 @@ STYLE_ADVICE_PROMPT = """{system}
 - 항목 정리는 "1. 보트넥 — 단정해 보임" 처럼 짧은 제목 + 한 줄 설명.
 - 마크다운 가능 (목록·항목 제목 볼드 등). 단 `#`/`##`/`###` 같은 헤드라인 사용 금지.
 - 이모지 금지. 범위 표기는 하이픈(-), 물결(~) 금지.
+- 답변에 "오늘의 웨딩 지식" 이라는 표현이나 그와 비슷한 닫는 팁 문단을 직접 쓰지 마세요. 마지막 팁은 시스템이 자동으로 한 줄 추가합니다.
 - 답변 끝에 한 줄: "원하시는 방향이 잡히면 그에 맞는 샵도 찾아드릴게요" 부드럽게 유도.
 
 [참고 — 체형별 드레스 가이드]
