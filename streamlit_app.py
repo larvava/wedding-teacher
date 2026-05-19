@@ -82,6 +82,18 @@ h1, h2, h3 {
 .stChatInputContainer {
     border-top: 1px solid #E8DECF;
 }
+[data-testid="stChatInput"],
+[data-testid="stChatInput"] > div,
+[data-testid="stChatInput"] textarea {
+    background-color: white !important;
+    color: #2C2825 !important;
+    -webkit-text-fill-color: #2C2825 !important;
+    caret-color: #2C2825 !important;
+}
+[data-testid="stChatInput"] textarea::placeholder {
+    color: #8a7f78 !important;
+    -webkit-text-fill-color: #8a7f78 !important;
+}
 button[kind="secondary"] {
     background-color: white !important;
     border: 1px solid #E8DECF !important;
